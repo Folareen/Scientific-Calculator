@@ -1,0 +1,202 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #dce5ee, #d4c8e2);
+    /* background-image: linear-gradient(to right, #050607, #1ebea9); */
+    font-family: sans-serif;
+}
+
+main{
+    width: 300px;
+    height: max-content;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 3px grey;
+    border: 5px solid lightgrey;
+}
+
+.output{
+    background-image: linear-gradient(to bottom left, rgb(37, 37, 136), rgb(155, 103, 103));
+    height: 160px;
+    /* color: white; */
+    border-radius: 5px ;
+    position: relative;
+    color: white;
+    margin-bottom: 5px;
+    width: 100%;
+    word-wrap:break-word;
+    /* overflow: hidden; */
+    box-sizing: border-box;
+    /* padding: 10px; */
+    /* border: 2px solid red; */
+    position: relative;
+}
+
+/* 10 decimal places */
+.result{
+    height: 100px;
+    width: 100%;
+    font-size: 2.5em;
+    font-weight: 900;
+    word-wrap: break-word;
+    word-break: keep-all;
+    line-height: 1em;
+    /* background-color: rgb(26, 158, 107); */
+    /* display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap; */
+    padding: 5px; 
+    box-sizing: border-box;
+    text-align: right;
+    /* margin-bottom: 10px; */
+    /* border: 2px solid red; */
+}
+.error{
+    height: 100px;
+    width: 100%;
+    font-size: 1em;
+    font-weight: 900;
+    word-wrap: break-word;
+    word-break: keep-all;
+    line-height: 1em;
+    padding: 10px; 
+    box-sizing: border-box;
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    font-style: italic;
+    color: rgb(245, 119, 119) ;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.operation{
+    height: 60px;
+    width: 100%;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: right;
+    line-height: 1.2em;
+    /* margin-top: 10%; */
+    /* background-color: green; */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    box-sizing: border-box;
+    /* padding: 5px; */
+    padding: 0 5px;
+    /* display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap; */
+    word-wrap: break-word;
+    word-break: break-all;
+    /* border: 2px solid black; */
+    /* overflow: hidden; */
+    letter-spacing: 1px;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: white;
+    background: transparent;
+    position: relative;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+}
+button:hover{
+    box-shadow: 0px 2px 5px hsl(266, 39%, 72%);
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+.functions{
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-auto-rows: 20px; */;
+    gap: 5px;
+}
+
+.functions button{
+    margin: 0;
+    outline: none;
+    border: none;
+    padding: 7px;
+    background-color: grey;
+    /* color: rgb(100,100, 255); */
+    color: rgb(5, 5, 48);
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.numbers{
+    padding: 5px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-auto-rows: 30px; */
+    gap: 5px;
+}
+.numbers button{
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: #696f85;
+    color: white;
+    font-weight: bold;
+}
+
+.operators{
+    padding: 5px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+.operators button{
+    padding: 7.5px;
+    font-weight: bold;
+}
+
+.answer{
+    background-color: lightgreen;
+    color: darkblue;
+}
+.delete{
+    background-color: darkred;
+    color: white;
+    padding: 12px 5px !important;
+}
+.clear{
+    background-color: brown;
+    color: darkgrey;
+}
+.solution{
+    grid-column : span 3;
+    background-color: #a3bfdb;
+    padding: 10px 7px !important;
+    margin-bottom: 0 !important;
+}
+
+/* @media screen and (min-width: 480px) {
+    body{
+        background-color: red;
+    }
+    .main{
+        width: 8055500px;
+    }
+    
+} */
