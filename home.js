@@ -187,9 +187,6 @@ let rightButton = new Button(RIGHT_BRACKET_BUTTON);
 rightButton.numberClick();
 
 // OPERATOR FUNCTIONS
-// function solutionToOperation(arg){
-//     return parseInt(arg, 10);
-// }
 SOLUTION_BUTTON.addEventListener('click', solutionFunc);
 function solutionFunc(){
     try{
@@ -238,6 +235,3 @@ CLOSE_BUTTON.addEventListener('click', close);
 function close(){
     HELP_CONTAINER.style.display = "none"
 }
-
-let operationText = OPERATION.innerText;
-let resultText = RESULT.innerText;
