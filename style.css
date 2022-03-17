@@ -9,6 +9,7 @@ body{
     background-image: linear-gradient(to right, #dce5ee, #d4c8e2);
     /* background-image: linear-gradient(to right, #050607, #1ebea9); */
     font-family: sans-serif;
+    position: relative;
 }
 
 main{
@@ -20,7 +21,7 @@ main{
 }
 
 .output{
-    background-image: linear-gradient(to bottom left, rgb(37, 37, 136), rgb(155, 103, 103));
+    background-image: linear-gradient(to bottom left, rgb(58, 58, 112), rgb(129, 80, 80));
     height: 160px;
     /* color: white; */
     border-radius: 5px ;
@@ -56,6 +57,7 @@ main{
     text-align: right;
     /* margin-bottom: 10px; */
     /* border: 2px solid red; */
+    color: rgb(208, 233, 208);
 }
 .error{
     height: 100px;
@@ -116,13 +118,17 @@ button{
     cursor: pointer;
     border: none;
     border-radius: 2px;
+    opacity: 0.93;
 }
 button:hover{
-    box-shadow: 0px 2px 5px hsl(266, 39%, 72%);
+    /* box-shadow: 0px 2px 5px hsl(266, 39%, 72%); */
+    opacity: 1;
 }
 
 button:active{
     transform: scale(0.95);
+    box-shadow: 0px 2px 5px hsl(266, 39%, 72%);
+
 }
 
 .functions{
@@ -200,3 +206,51 @@ button:active{
     }
     
 } */
+
+.help{
+    width: 50px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 4px;
+    /* margin-left: 0;
+    margin-right: auto; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: rgb(255, 255, 255);
+    background-color: green;
+    /* border: 2px solid darkolivegreen; */
+}
+.help-container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, rgba(220, 229, 238, 0.6), rgba(212, 200, 226, 0.6));
+    display: none;
+}
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: darkred;
+    background-color: rgb(65, 45, 45);
+    font-weight: 900;
+    font-size: 2em;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+}
+.help-information{
+    /* position: absolute; */
+    width: 300px;
+    background-color: green;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}

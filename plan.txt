@@ -44,17 +44,19 @@ C (clear)
 
 
 >>>>>>features
-show erros in input..
+show errors in input..
 history..
 enable keypress functions
 
+a little help button..
 
 
 
 
 
 
-create a class that will accept (selector,)
+
+change hover color
 
 
 
