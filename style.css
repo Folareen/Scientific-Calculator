@@ -119,13 +119,36 @@ button:active{
     margin: 0;
     outline: none;
     border: none;
-    padding: 7px;
+    padding: 5px 7px;
     background-color: grey;
     color: rgb(5, 5, 48);
     font-weight: bold;
     box-sizing: border-box;
+    position: relative;
+    font-size: 1em;
 }
-
+.func{
+    /* visibility: hidden; */
+    /* background-color: transparent; */
+    color: grey ;
+}
+.functions button .cover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    pointer-events: none;
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sup{
+    display: block !important;
+}
 .numbers{
     padding: 5px 0;
     display: grid;
@@ -133,11 +156,12 @@ button:active{
     gap: 5px;
 }
 .numbers button{
-    padding: 12px;
+    padding: 5px 10px;
     box-sizing: border-box;
     background-color: #696f85;
     color: white;
-    font-weight: bold;
+    font-size: 1.5em;
+    font-weight: bolder;
 }
 
 .operators{
@@ -147,8 +171,9 @@ button:active{
     gap: 5px;
 }
 .operators button{
-    padding: 7.5px;
-    font-weight: bold;
+    padding: 2px;
+    font-weight: bolder;
+    font-size: 1.5em;
 }
 
 .answer{
@@ -158,7 +183,7 @@ button:active{
 .delete{
     background-color: darkred;
     color: white;
-    padding: 12px 5px !important;
+    padding: 8px 5px !important;
 }
 .clear{
     background-color: brown;
@@ -167,7 +192,7 @@ button:active{
 .solution{
     grid-column : span 3;
     background-color: #a3bfdb;
-    padding: 10px 7px !important;
+    padding: 8px 7px !important;
     margin-bottom: 0 !important;
 }
 
@@ -216,6 +241,8 @@ button:active{
     box-sizing: border-box;
     border-radius: 5px;
     line-height: 1.5em;
+    list-style-position: inside;
+    list-style-type: decimal;
 }
 .help-information span{
     background-color: rgb(45, 134, 27);

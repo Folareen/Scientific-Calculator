@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scientific Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 </head>
 <body>
     <main>
@@ -19,52 +20,132 @@
         <div class="input">
             <div class="functions">
                 <button class="sin">
-                    sin
+                    <div class="func">
+                        sin(
+                    </div>
+                    <div class="cover">
+                        Sin
+                    </div>
                 </button>
                 <button class="cos">
-                    cos
+                    <div class="func">
+                        cos(
+                    </div>
+                    <div class="cover">
+                        Cos
+                    </div>
                 </button>
                 <button class="tan">
-                    tan
+                    <div class="func">
+                        tan(
+                    </div>
+                    <div class="cover">
+                        Tan
+                    </div>
                 </button>
                 <button class="e">
-                    e
+                    <div class="func">
+                        e()
+                    </div>
+                    <div class="cover">
+                        e
+                    </div>
                 </button>
                 <button class="asin">
-                    asin
+                    <div class="func">
+                        asin(
+                    </div>
+                    <div class="cover sup">
+                        Sin <sup>-1</sup>
+                    </div>
                 </button>
                 <button class="acos">
-                    acos
+                    <div class="func">
+                        acos(
+                    </div>
+                    <div class="cover sup">
+                        Cos <sup>-1</sup>
+                    </div>
                 </button>
                 <button class="atan">
-                    atan
+                    <div class="func">
+                        tan(
+                    </div>
+                    <div class="cover sup">
+                        Tan <sup>-1</sup>
+                    </div>
                 </button>
                 <button class="pi">
-                    pi
+                    <div class="func">
+                        pi()
+                    </div>
+                    <div class="cover">
+                        <span class="iconify" data-icon="mdi:pi"></span>
+                    </div>
                 </button>
                 <button class="rad">
-                    Rad
+                    <div class="func">
+                        rad(
+                    </div>
+                    <div class="cover">
+                        Rad
+                    </div>
                 </button>
                 <button class="deg">
-                    Deg
+                    <div class="func">
+                        deg(
+                    </div>
+                    <div class="cover">
+                        Deg
+                    </div>
                 </button>
                 <button class="square">
-                    square
+                    <div class="func">
+                        square(
+                    </div>
+                    <div class="cover sup">
+                        x <sup>2</sup>
+                    </div>
                 </button>
                 <button class="square-root">
-                    sqrt
+                    <div class="func">
+                        sqrt(
+                    </div>
+                    <div class="cover">
+                        <span class="iconify" data-icon="fa6-solid:square-root-variable"></span>
+                    </div>
                 </button>
                 <button class="factorial">
-                    factorial
+                    <div class="func">
+                        factorial(
+                    </div>
+                    <div class="cover">
+                        x!
+                    </div>
                 </button>
                 <button class="natural-logarithm">
-                    ln
+                    <div class="func">
+                        ln(
+                    </div>
+                    <div class="cover">
+                        ln
+                    </div>
                 </button>
                 <button class="log">
-                    log
+                    <div class="func">
+                        log(
+                    </div>
+                    <div class="cover">
+                        Log
+                    </div>
                 </button>
                 <button class="exponential">
-                    pow
+                    <div class="func">
+                        pow()
+                    </div>
+                    <div class="cover">
+                        ^
+                    </div>
                 </button>
             </div>
 
@@ -102,32 +183,50 @@
     <button class="help">HELP</button>
     <div class="help-container">
         <button class="close">X</button>
-        <div class="help-information">
-            1.Always add brackets to the end of every functions before inputting values.
-            <br>
-            i.e <span>sin(90) NOT sin90</span>
-            <br>
-            <br>
-            2.Add brackets to functions that doesn't need values too.
-            <br>
-            i.e <span>pi() NOT p</span>
-            <br>
-            <br>
-            3.Use multiplication(*) in place of brackets when you want to multiply functions by functions or numbers.
-            <br>
-            i.e <span> 6 * sin(90) NOT 6(sin(90))</span>
-            <br>
-            <br>
-            3.Single click CE to clear input.
-            <br>
-            <br>
-            4.Double click CE to clear input, result and error.
-            <br>
-            <br>
-            5.Do not add unnecessary zeros to numbers.
-            <br>
-            i.e <span>567 NOT 0567</span>.
-        </div>
+        <ul class="help-information">
+            <li>
+                Ensure brackets are added to the end of every function before inputting values.
+                <br>
+                i.e <span>sin(90) NOT sin90</span>
+                <br>
+                <br>
+            </li>
+            <li>
+                Ensure brackets are added to functions that doesn't need values too.
+                <br>
+                i.e <span>pi() NOT p</span>
+                <br>
+                <br>
+            </li>
+            <li>
+                Use multiplication(*) in place of brackets when you want to multiply functions by functions or numbers.
+                <br>
+                i.e <span> 6 * sin(90) NOT 6(sin(90))</span>
+                <br>
+                <br>
+            </li>
+            <li>
+                Single click CE to clear input.
+                <br>
+                <br>
+            </li>
+            <li>
+                Double click CE to clear input, result and error.
+                <br>
+                <br>
+            </li>
+            <li>
+                Do not add unnecessary zeros to numbers.
+                <br>
+                i.e <span>567 NOT 0567</span>
+                <br>
+                <br>
+            </li>
+            <li>
+                8.The exponential (^) function takes two values.The number and power to be raised to.The two values should be separated with a comma.
+                i.e <span>pow(5, 2). This means 5 raised to the power of 2 which is 25.</span>
+            </li>
+        </ul>
     </div>
     <script src="home.js"></script>
 </body>

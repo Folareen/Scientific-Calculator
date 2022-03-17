@@ -1,3 +1,4 @@
+alert("PLS, CLICK THE HELP BUTTON FOR GUIDE!");
 // ELEMENTS SELECTION
 const OUTPUT = document.querySelector('.output');
 const OPERATION = document.querySelector('.operation');
@@ -56,7 +57,7 @@ class Button{
     };
     output(){
         if(OPERATION.innerText.length < 80){
-            OPERATION.innerText += this.innerText;
+            OPERATION.innerText += this.firstElementChild.innerText;
         }
         else{
             alert("MAX LENGTH OF CHARACTER EXCEEDED!!!");
@@ -173,17 +174,17 @@ ALL_BUTTON_OBJECTS.forEach(button => button.numberClick());
 
 // OPERATION BUTTONS
 let addButton = new Button(ADD_BUTTON);
-addButton.click();
+addButton.numberClick();
 let subtractButton = new Button(SUBTRACT_BUTTON);
-subtractButton.click();
+subtractButton.numberClick();
 let multiplyButton = new Button(MULTIPLY_BUTTON);
-multiplyButton.click();
+multiplyButton.numberClick();
 let divideButton = new Button(DIVIDE_BUTTON);
-divideButton.click();
+divideButton.numberClick();
 let leftButton = new Button(LEFT_BRACKET_BUTTON);
-leftButton.click();
+leftButton.numberClick();
 let rightButton = new Button(RIGHT_BRACKET_BUTTON);
-rightButton.click();
+rightButton.numberClick();
 
 // OPERATOR FUNCTIONS
 // function solutionToOperation(arg){
@@ -252,4 +253,3 @@ function close(){
 
 let operationText = OPERATION.innerText;
 let resultText = RESULT.innerText;
-sessionStorage.setItem(operationText, resultText);
