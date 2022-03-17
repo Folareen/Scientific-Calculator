@@ -198,18 +198,6 @@ function solutionFunc(){
             document.querySelector(".error").remove();
         }
         RESULT.innerText = eval(OPERATION.innerText);
-        // let arg = eval(parseInt(OPERATION.innerText , 10));
-        // console.log(arg);
-        // if (true){
-        //     alert(arg)
-        //     RESULT.innerText = eval(OPERATION.innerText);
-        //     alert(arg);
-        // }
-        // else{
-        //     // console.log(arg);
-        //     // RESULT.innerText = eval(arg);
-        // }
-        // solutionToOperation(OPERATION.innerText)
     }
 
 
