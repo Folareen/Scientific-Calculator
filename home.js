@@ -59,9 +59,22 @@ class Button{
             OPERATION.innerText += this.innerText;
         }
         else{
-            alert(`${OPERATION.innerText.length}:max!!!`)
+            alert("MAX LENGTH OF CHARACTER EXCEEDED!!!");
         }
     }
+    numberClick(){
+        let event_q = this.selector;
+        event_q.addEventListener('click', this.numberOutput);
+    };
+    numberOutput(){
+        if(OPERATION.innerText.length < 80){
+            OPERATION.innerText += this.innerText;
+        }
+        else{
+            alert("MAX LENGTH OF CHARACTER EXCEEDED!!!")
+        }
+    }
+    
 };
 
 
@@ -99,6 +112,7 @@ logButton.click();
 let exponentialButton = new Button(EXPONENTIAL_BUTTON);
 exponentialButton.click();
 
+// FUNCTIONS DECLARATION
 function sin(arg){
     return(Math.sin(arg * Math.PI/180))
 }
@@ -155,34 +169,7 @@ function pow(arg1, arg2){
 // NUMBER BUTTONS
 const ALL_NUMBER_BUTTONS = [...document.querySelectorAll(".numbers > button")];
 const ALL_BUTTON_OBJECTS = ALL_NUMBER_BUTTONS.map(button => new Button(button));
-ALL_BUTTON_OBJECTS.forEach(button => button.click());
-
-// NUMBER BUTTONS KEYPRESS FUNCTIONALITY
-// console.log(sin);
-// let nineButton = new Button(NINE_BUTTON);
-// nineButton.click();
-// let eightButton = new Button(EIGHT_BUTTON);
-// eightButton.click();
-// let sevenButton = new Button(SEVEN_BUTTON);
-// sevenButton.click();
-// let sixButton = new Button(SIX_BUTTON);
-// sixButton.click();
-// let fiveButton = new Button(FIVE_BUTTON);
-// fiveButton.click();
-// let fourButton = new Button(FOUR_BUTTON);
-// fourButton.click();
-// let threeButton = new Button(THREE_BUTTON);
-// threeButton.click();
-// let twoButton = new Button(TWO_BUTTON);
-// twoButton.click();
-// let oneButton = new Button(ONE_BUTTON);
-// oneButton.click();
-// let doubleZeroButton = new Button(DOUBLE_ZERO_BUTTON);
-// doubleZeroButton.click();
-// let zeroButton = new Button(ZERO_BUTTON);
-// zeroButton.click();
-// let decimalButton = new Button(DECIMAL_BUTTON);
-// decimalButton.click();
+ALL_BUTTON_OBJECTS.forEach(button => button.numberClick());
 
 // OPERATION BUTTONS
 let addButton = new Button(ADD_BUTTON);
@@ -198,6 +185,10 @@ leftButton.click();
 let rightButton = new Button(RIGHT_BRACKET_BUTTON);
 rightButton.click();
 
+// OPERATOR FUNCTIONS
+// function solutionToOperation(arg){
+//     return parseInt(arg, 10);
+// }
 SOLUTION_BUTTON.addEventListener('click', solutionFunc);
 function solutionFunc(){
     try{
@@ -205,8 +196,22 @@ function solutionFunc(){
             RESULT.innerText = "";
             document.querySelector(".error").remove();
         }
-        RESULT.innerText = (eval(OPERATION.innerText)).toPrecision(5);
+        RESULT.innerText = eval(OPERATION.innerText);
+        // let arg = eval(parseInt(OPERATION.innerText , 10));
+        // console.log(arg);
+        // if (true){
+        //     alert(arg)
+        //     RESULT.innerText = eval(OPERATION.innerText);
+        //     alert(arg);
+        // }
+        // else{
+        //     // console.log(arg);
+        //     // RESULT.innerText = eval(arg);
+        // }
+        // solutionToOperation(OPERATION.innerText)
     }
+
+
     catch(error){
         RESULT.innerText = "";
         const ERROR = document.createElement("div");
@@ -228,17 +233,23 @@ function clearFunc(){
 CLEAR_BUTTON.addEventListener('dblclick', clearResultFunc);
 function clearResultFunc(){
     RESULT.innerText = "";
+    OPERATION.innerText = ""
     if(document.querySelector(".error")){
         document.querySelector(".error").remove();
     }
 };
 
+
 // HELP
 HELP_BUTTON.addEventListener('click', help)
 function help(){
-    HELP_CONTAINER.style.display = "flex"
+    HELP_CONTAINER.style.display = "flex";
 }
 CLOSE_BUTTON.addEventListener('click', close);
 function close(){
     HELP_CONTAINER.style.display = "none"
 }
+
+let operationText = OPERATION.innerText;
+let resultText = RESULT.innerText;
+sessionStorage.setItem(operationText, resultText);
