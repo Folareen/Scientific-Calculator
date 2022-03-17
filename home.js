@@ -193,10 +193,15 @@ function solutionFunc(){
         if(document.querySelector(".error")){
             RESULT.innerText = "";
             document.querySelector(".error").remove();
+        };
+        if ((String(eval(OPERATION.innerText)).length) < 20 ){
+            RESULT.innerText = eval(OPERATION.innerText);
         }
-        RESULT.innerText = eval(OPERATION.innerText);
+        else{
+            alert("RESULT MAXIMUM CHARACTER EXCEEDED!");
+        }
+        
     }
-
 
     catch(error){
         RESULT.innerText = "";
@@ -214,7 +219,7 @@ function deleteFunc(){
 
 CLEAR_BUTTON.addEventListener('click', clearFunc);
 function clearFunc(){
-    OPERATION.innerText = 0;
+    OPERATION.innerText = "";
 };
 CLEAR_BUTTON.addEventListener('dblclick', clearResultFunc);
 function clearResultFunc(){
