@@ -189,6 +189,7 @@ rightButton.numberClick();
 // OPERATOR FUNCTIONS
 SOLUTION_BUTTON.addEventListener('click', solutionFunc);
 function solutionFunc(){
+        sessionStorage.clear();
     try{
         if(document.querySelector(".error")){
             RESULT.innerText = "";
@@ -196,6 +197,7 @@ function solutionFunc(){
         };
         if ((String(eval(OPERATION.innerText)).length) < 20 ){
             RESULT.innerText = eval(OPERATION.innerText);
+            sessionStorage.setItem('ans', eval(OPERATION.innerText))
         }
         else{
             alert("RESULT MAXIMUM CHARACTER EXCEEDED!");
@@ -230,6 +232,10 @@ function clearResultFunc(){
     }
 };
 
+ANSWER_BUTTON.addEventListener("click", displayAnswer);
+function displayAnswer(){
+    RESULT.innerText = `Ans: ${sessionStorage.getItem('ans')}`;
+}
 
 // HELP
 HELP_BUTTON.addEventListener('click', help)
